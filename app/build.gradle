@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.jakewharton.hugo'
+apply plugin: 'com.neenbedankt.android-apt'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
+        classpath 'me.tatarka:gradle-retrolambda:3.2.4'
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "net.beaconradar"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    sourceSets {
+        main {
+            java {
+                exclude '**/FragmentDetails.java'
+                exclude '**/DetailsViewState.java'
+            }
+        }
+        androidTest {
+            java {
+                exclude '**/TestFragmentDetails.java'
+                exclude '**/TestDetailsViewState.java'
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:recyclerview-v7:23.1.0'
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:preference-v14:23.1.0'
+    compile 'com.hannesdorfmann.mosby:mvp:2.0.0'
+    compile 'com.hannesdorfmann.mosby:viewstate:2.0.0'
+    compile 'com.google.dagger:dagger:2.0.1'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'org.apache.commons:commons-collections4:4.1'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile ('com.github.afollestad.material-dialogs:commons:0.8.5.4@aar') { transitive = true }
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
+    apt 'com.google.dagger:dagger-compiler:2.0'
+    provided 'javax.annotation:jsr250-api:1.0'
+}
