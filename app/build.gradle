@@ -27,11 +27,12 @@ android {
         minSdkVersion 18
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0"
-        multiDexEnabled true
+        versionName "1.0.0"
+        multiDexEnabled false
     }
     buildTypes {
         release {
+            shrinkResources true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -42,20 +43,6 @@ android {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/NOTICE.txt'
-    }
-    sourceSets {
-        main {
-            java {
-                exclude '**/FragmentDetails.java'
-                exclude '**/DetailsViewState.java'
-            }
-        }
-        androidTest {
-            java {
-                exclude '**/TestFragmentDetails.java'
-                exclude '**/TestDetailsViewState.java'
-            }
-        }
     }
 }
 
