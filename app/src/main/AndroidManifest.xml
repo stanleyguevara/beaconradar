@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.beaconradar">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="net.beaconradar.dagger.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/beacon_radar_outline"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <receiver android:name="net.beaconradar.service.ReceiverStatic">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!--ACTION_USER_PRESENT went dynamic-->
+                <!--action android:name="android.intent.action.USER_PRESENT" /-->
+                <action android:name="net.beaconradar.WAKEUP"/>
+                <!--Plus explicit intent for wakeup-->
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="net.beaconradar.service.BeaconService"
+            android:icon="@drawable/ic_sync"
+            android:exported="true"
+            android:label="@string/service_name">
+            <intent-filter>
+                <action android:name="net.beaconradar.NOTIF_REQ_SCAN"/>
+                <action android:name="net.beaconradar.NOTIF_REQ_PAUSE"/>
+                <action android:name="net.beaconradar.NOTIF_REQ_KILL"/>
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="net.beaconradar.database.MainContentProvider"
+            android:authorities="net.beaconradar.maincontentprovider"
+            android:exported="false"
+            android:multiprocess="true"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="net.beaconradar.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name="net.beaconradar.main.MainActivity"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="net.beaconradar.details.DetailsActivity"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+        </activity>
+
+        <activity
+            android:name="net.beaconradar.logread.LogReadActivity"
+            android:alwaysRetainTaskState="true"
+            android:label="Logger"
+            android:launchMode="singleTop">
+        </activity>
+
+    </application>
+
+</manifest>

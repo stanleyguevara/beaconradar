@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.beaconradar.utils.CircleImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/beacon_icon"
+    android:layout_width="34dp"
+    android:layout_height="34dp"
+    android:padding="4dp"
+    android:src="@drawable/ic_star"
+    android:scaleType="centerInside"
+    />

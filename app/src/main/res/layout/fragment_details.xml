@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/fake_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="4dp"
+                >
+
+                <net.beaconradar.utils.CircleImageView
+                    android:id="@+id/beacon_icon"
+                    android:layout_width="66dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:src="@drawable/ic_placeholder"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:scaleType="centerInside"
+                    />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/beacon_icon"
+                    android:layout_toStartOf="@+id/big_value"
+                    android:layout_alignParentTop="true">
+
+                    <TextView
+                        android:id="@+id/beacon_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="21sp"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingStart="4dp"
+                        android:paddingTop="4dp"
+                        android:text="Nazwa na 16 znakow"
+                        />
+
+                    <TextView
+                        android:id="@+id/beacon_subtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="15sp"
+                        android:includeFontPadding="false"
+                        android:paddingStart="4dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="2dp"
+                        tools:text="Last Seen: 22:07"
+                        />
+
+                </LinearLayout>
+
+                <net.beaconradar.utils.ClickThroughTextView
+                    android:id="@+id/big_value"
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:gravity="end|center_vertical"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="10dp"
+                    android:textStyle="bold"
+                    android:textSize="52dp"
+                    android:text="N/A" />
+
+            </RelativeLayout>
+
+            <!-- Mosby required -->
+            <TextView
+                android:id="@+id/errorView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="gone"/>
+
+            <!-- Mosby required -->
+            <TextView
+                android:id="@+id/loadingView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:id="@+id/contentView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:paddingStart="6dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp">
+
+                <net.beaconradar.details.DoubleTapBarChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <!--style="@style/AppTheme.Huge"-->
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/param_container"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/header_scanned"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/graphite">
+
+                    <TextView
+                        android:id="@+id/header_scanned_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="6dp"
+                        android:gravity="center|left"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:background="?attr/selectableItemBackground"
+                        android:textColor="@color/white"
+                        android:text="Scanned fields"
+                        />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tlm_param_container"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:id="@+id/header_tlm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/graphite">
+
+                    <TextView
+                        android:id="@+id/header_tlm_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="6dp"
+                        android:gravity="center|left"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:background="?attr/selectableItemBackground"
+                        android:textColor="@color/white"
+                        android:text="Scanned fields"
+                        />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/header_user_defined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/graphite">
+
+                <TextView
+                    android:id="@+id/header_user_defined_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="6dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="?attr/selectableItemBackground"
+                    android:textColor="@color/white"
+                    android:text="Atrributes"
+                    />
+
+            </FrameLayout>
+
+            <net.beaconradar.utils.ParamLayout
+                android:id="@+id/param_beacon_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="4dp"
+                android:background="?attr/selectableItemBackground">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="6dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="Name"
+                    />
+
+                <TextView
+                    android:id="@+id/param_beacon_name_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="14dp"
+                    android:gravity="center|right"
+                    android:textSize="15sp"
+                    android:text="Beacon name"
+                    />
+
+            </net.beaconradar.utils.ParamLayout>
+
+            <FrameLayout
+                android:id="@+id/param_beacon_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="4dp"
+                android:background="?attr/selectableItemBackground">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="start"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="6dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="Icon"
+                    />
+
+                <net.beaconradar.utils.TintableImageView
+                    android:id="@+id/param_beacon_icon_value"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="end"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_placeholder"
+                    android:scaleType="centerInside"
+                    android:tint="@color/gray500"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/param_beacon_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="4dp"
+                android:background="?attr/selectableItemBackground">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="start"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="6dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="Color"
+                    />
+
+                <View
+                    android:id="@+id/param_beacon_color_value"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="12dp"
+                    android:background="@color/graphite"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/graphite">
+
+                <FrameLayout
+                    android:id="@+id/header_intent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="4dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:id="@+id/header_intent_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="6dp"
+                        android:gravity="center|left"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Broadcast Intent on:"
+                        />
+
+                    <ImageView
+                        android:id="@+id/header_intent_icon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_help_circle"
+                        android:scaleType="centerInside"
+                        />
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <net.beaconradar.utils.ParamCheckboxLayout
+                android:id="@+id/param_beacon_appeared"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+                <TextView
+                    android:id="@+id/param_beacon_appeared_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_gravity="start"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="6dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="?attr/selectableItemBackground"
+                    />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/param_beacon_appeared_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="end"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"/>
+
+            </net.beaconradar.utils.ParamCheckboxLayout>
+
+            <net.beaconradar.utils.ParamCheckboxLayout
+                android:id="@+id/param_beacon_visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+                <TextView
+                    android:id="@+id/param_beacon_visible_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_gravity="start"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="6dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="?attr/selectableItemBackground"
+                    />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/param_beacon_visible_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="end"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"/>
+
+            </net.beaconradar.utils.ParamCheckboxLayout>
+
+            <net.beaconradar.utils.ParamCheckboxLayout
+                android:id="@+id/param_beacon_disappeared"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+                <TextView
+                    android:id="@+id/param_beacon_disappeared_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_gravity="start"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="6dp"
+                    android:gravity="center|left"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="?attr/selectableItemBackground"
+                    />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/param_beacon_disappeared_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="end"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"/>
+
+            </net.beaconradar.utils.ParamCheckboxLayout>
+
+            <View
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

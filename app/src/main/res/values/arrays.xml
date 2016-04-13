@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fab_mode_txt">
+        <item>Minimize</item>
+        <item>Translate</item>
+        <item>Stay Fixed</item>
+    </string-array>
+    <integer-array name="fab_mode_val">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+
+    <!--Beacon mode identification, more in EQ.java-->
+    <string-array name="id_beacon_txt">
+        <item>Frame content</item>
+        <item>MAC address</item>
+        <item>Frame + MAC</item>
+        <item>Ignore</item>
+    </string-array>
+    <integer-array name="id_beacon_val">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+    </integer-array>
+    <string-array name="id_tlm_txt">
+        <item>MAC address</item>
+        <item>MAC (merge)</item>
+        <item>Ignore</item>
+    </string-array>
+    <integer-array name="id_tlm_val">
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+    <string-array name="id_edd_txt">
+        <item>Frame content</item>
+        <item>MAC address</item>
+        <item>MAC (merge)</item>
+        <item>Frame + MAC</item>
+        <item>Ignore</item>
+    </string-array>
+    <integer-array name="id_edd_val">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>2</item>
+        <item>4</item>
+    </integer-array>
+
+    <string-array name="beacon_context">
+        <item>First</item>
+        <item>Second</item>
+    </string-array>
+
+    <string-array name="nearby_context" >
+        <item>Set Name</item>
+        <item>Set Color</item>
+        <item>Set Icon</item>
+    </string-array>
+
+    <string-array name="nearby_dropdown_options">
+        <item>As spotted</item>
+        <item>Nearest</item>
+        <item>Last Seen</item>
+        <item>Distant</item>
+        <item>Name A-Z</item>
+        <item>Name Z-A</item>
+        <item>Type</item>
+    </string-array>
+
+    <integer-array name="nearby_dropdown_icons">
+        <item>@drawable/ic_radar</item>
+        <item>@drawable/ic_signal_desc</item>
+        <item>@drawable/ic_eye</item>
+        <item>@drawable/ic_signal_asc</item>
+        <item>@drawable/ic_sort_alphabetical</item>
+        <item>@drawable/ic_sort_alphabetical</item>
+        <item>@drawable/ic_paw</item>
+    </integer-array>
+</resources>

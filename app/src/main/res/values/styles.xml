@@ -1,0 +1,129 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
+        <!--item name="android:alertDialogStyle">@style/AppCompatAlertDialogStyle</item-->
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:dropDownListViewStyle">@style/AppTheme.PopupMenuTheme</item>
+        <item name="customAppCompatPopupWindowStyle">@style/CustomAppCompatPopupWindow</item>
+        <!--item name="listPopupWindowStyle">@style/CustomListPopupWindow</item-->
+        <!--Workaround for the Android bug https://code.google.com/p/android/issues/detail?id=24922 -->
+        <!--item name="android:dropDownListViewStyle">@style/AppTheme.MyListView</item-->
+
+        <!--item name="android:activatedBackgroundIndicator">@color/spinner_selector</item-->
+        <!--item name="alertDialogStyle">@style/AppCompatAlertDialogStyle</item-->
+        <!--item name="android:listSeparatorTextViewStyle">@style/AppTheme.ListSeparatorTextView</item-->
+    </style>
+
+    <!--Workaround to positon custom popup window directly to the bottom left corner of anchor below lollipop-->
+    <!--Normally it's offset, beacause of shadow that belongs to popup window-->
+    <style name="CustomAppCompatPopupWindow" parent="@style/Widget.AppCompat.ListPopupWindow">
+        <item name="popupOffsetX">-4dp</item>
+        <item name="popupOffsetY">-4dp</item>
+    </style>
+
+    <!--In case I need to style Overflow menu-->
+    <style name="AppTheme.PopupMenuTheme" parent="@style/Widget.AppCompat.ListView.DropDown">
+        <!--item name="android:background">@color/accent2</item-->
+    </style>
+
+    <style name="AppTheme.Drawer" parent="AppTheme">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="floating_action_button">
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
+    <style name="progress_circle">
+        <item name="android:layout_marginRight">28dp</item>
+        <item name="android:layout_marginBottom">31dp</item>
+    </style>
+
+    <!-- Bug fix 183376 with stylig PreferenceFragment rows and AppCompatDialogFragment-->
+    <!-- This is needed because the default PreferenceCategory appearance doesn't use bold text style -->
+    <style name="Preference_TextAppearanceMaterialBody2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">#FFC107</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <!-- Used for the background -->
+        <item name="android:background">#4CAF50</item>
+        <item name="windowNoTitle">false</item>
+        <item name="android:windowTitleStyle">@style/MyTitleTextStyle</item>
+    </style>
+
+    <style name="MyTitleTextStyle">
+        <item name="android:textColor">#FFEB3B</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+
+    <!--AlertDialog theme fixed-->
+    <style name="AppCompatAlertDialogStyle" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/accent</item>
+        <item name="windowNoTitle">false</item>
+        <item name="android:windowTitleStyle">@style/AppCompatAlertDialogTitle</item>
+        <item name="android:textAppearanceButton">@style/AppCompatAlertDialogButton</item>
+        <!--item name="android:buttonStyle">@style/AppCompatAlertDialogButton</item-->
+        <!--item name="android:borderlessButtonStyle">@style/AppCompatAlertDialogButton</item-->
+        <!--item name="android:button">@style/AppCompatAlertDialogButton</item-->
+        <!--item name="android:buttonBarStyle">@style/AppCompatAlertDialogButton</item-->
+        <!--item name="android:buttonBarButtonStyle">@style/AppCompatAlertDialogButton</item-->
+        <!--item name="android:buttonStyle">@style/AppCompatAlertDialogButton</item-->
+    </style>
+
+    <style name="AppCompatAlertDialogTitle">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textStyle">normal</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+
+    <style name="AppCompatAlertDialogButton" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textStyle">bold</item>
+        <!--item name="android:textSize">@dimen/abc_text_size_button_material</item-->
+        <!--item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Button</item-->
+        <!--item name="android:textAllCaps">true</item-->
+    </style>
+
+    <style name="AppTheme.Huge" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">64sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.Header" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.Big" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

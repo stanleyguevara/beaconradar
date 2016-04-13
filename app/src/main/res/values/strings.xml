@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Beacon Radar</string>
+
+    <string name="title_section1">W pobliżu</string>
+    <string name="title_section2">Nawigacja</string>
+    <string name="title_section3">Promocje</string>
+    <string name="title_section4">Obserwuj</string>
+    <string name="title_section5">Historia</string>
+    <string name="title_section6">Ustawienia</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="service_name">Beacon discovery</string>
+
+    <string name="preference_header_something">Header 1</string>
+    <string name="title_list_preference">Tytuł listy</string>
+    <string name="dialog_title_list_preference">To jest dialog</string>
+    <string name="dialog_message_list_preference">Akuku</string>
+    <string name="title_checkbox_preference">To jest checkbox</string>
+    <string name="default_checkbox_preference">Defaultowa valuua</string>g>
+    <string name="another_checkbox_title">Inna valuua</string>
+
+    <string name="color_picker_title">Pick a color</string>
+    <string name="color_picker_sub">for something</string>
+    <string name="color_picker_custom">CUSTOM</string>
+    <string name="color_picker_presets">PRESET</string>
+    <string name="positive_button">ACCEPT</string>
+    <string name="negative_button">CANCEL</string>
+
+    <string name="error_bluetooth_off">Touch to turn Bluetooth ON.</string>
+    <string name="error_bluetooth_unavailable">"Bluetooth is unavailable."</string>
+    <string name="error_bluetooth_turning_on">"Bluetooth turning ON..."</string>
+    <string name="error_bluetooth_turning_off">"Bluetooth turning OFF..."</string>
+    <string name="error_bluetooth_busy">Bluetooth is busy.</string>
+    <string name="error_scan_not_requested">Press play to scan.</string>
+    <string name="action_samples">Samples:</string>
+    <string name="whatever_you_like">Literally (almost) anything!</string>
+    <string name="name_hint">Type new name</string>
+    <string name="too_short">Too short!</string>
+    <string name="too_long">Too long!</string>
+    <string name="beacon_name">Beacon Name</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="send_to">Send log.db via</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/beacon_context_first"
+        android:icon="@drawable/ic_play"
+        android:title="First Option"/>
+    <item
+        android:id="@+id/beacon_context_second"
+        android:icon="@drawable/ic_arrange_bring_forward"
+        android:title="Second Option"/>
+</menu>

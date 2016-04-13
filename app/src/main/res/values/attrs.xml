@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressFAB">
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="pfab_progressColor" format="color" />
+        <attr name="pfab_incompleteProgressColor" format="color" />
+        <attr name="pfab_strokeWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressCircle">
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="progressColor" format="color" />
+        <attr name="incompleteProgressColor" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TintableImageView">
+        <attr name="tint" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomAppCompatPopupWindow">
+        <attr name="popupOffsetX" format="dimension"/>
+        <attr name="popupOffsetY" format="dimension"/>
+    </declare-styleable>
+    
+    <declare-styleable name="CustomAppCompatPopupWindowStyle">
+        <attr name="customAppCompatPopupWindowStyle" format="reference"/>
+    </declare-styleable>
+
+    <attr name="customSelectableItemSelector" format="reference"/>
+</resources>

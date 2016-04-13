@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="net.beaconradar.logread.LogReadActivityActivity">
+    <item
+        android:id="@+id/send"
+        android:title="Send log"
+        android:icon="@drawable/ic_telegram"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/toggle"
+        android:title="Toggle"
+        android:icon="@drawable/ic_checkbox_blank_circle_outline"
+        app:showAsAction="always" />
+</menu>

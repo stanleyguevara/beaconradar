@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_toggle_rssi_distance"
+        android:title="Toggle Distance / RSSI"
+        android:icon="@drawable/ic_access_point"
+        app:showAsAction="always" />
+    <item
+        android:visible="false"
+        android:id="@+id/action_show_last_n"
+        android:title="@string/action_samples"
+        android:icon="@drawable/ic_placeholder"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_show_average"
+        android:title="Average"
+        android:icon="@drawable/ic_placeholder"
+        android:checkable="true"
+        android:checked="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_exclude_missing"
+        android:title="Exclude missing"
+        android:icon="@drawable/ic_placeholder"
+        android:checkable="true"
+        android:checked="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_autoscale"
+        android:title="Autoscale"
+        android:icon="@drawable/ic_placeholder"
+        android:checkable="true"
+        android:checked="true"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_forget"
+        android:title="Forget beacon"
+        android:icon="@drawable/ic_placeholder"
+        android:checkable="false"
+        app:showAsAction="never"/>
+    <!--item    For testing purposes.
+        android:id="@+id/action_test"
+        android:title="Test"
+        app:showAsAction="never" /-->
+</menu>

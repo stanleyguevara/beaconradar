@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <net.beaconradar.utils.TintableImageView
+        android:id="@+id/tab_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        app:tint="@color/tab_icon_selector">
+    </net.beaconradar.utils.TintableImageView>
+
+    <net.beaconradar.utils.TintableImageView
+        android:id="@+id/tab_dropdown"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="6dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_dropdown"
+        app:tint="@color/tab_dropdown_selector">
+    </net.beaconradar.utils.TintableImageView>
+
+    <View
+        android:id="@+id/tab_divider"
+        android:layout_width="1px"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_gravity="start"/>
+
+</FrameLayout>

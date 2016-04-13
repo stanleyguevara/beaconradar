@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="20dp">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            layout="@layout/beacon_identifier_small"/>
+
+    </FrameLayout>
+
+    <include layout="@layout/preference_divider_slim"/>
+
+    <TextView
+        android:id="@+id/context_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:gravity="center|left"
+        android:drawablePadding="12dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="?attr/selectableItemBackground"
+        android:text="Name"
+        />
+    <!--Icons are set via code due to bug https://code.google.com/p/android/issues/detail?id=191111 Released in 23.1.1-->
+
+    <include layout="@layout/preference_divider_slim"/>
+
+    <TextView
+        android:id="@+id/context_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:gravity="center|left"
+        android:drawablePadding="12dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="?attr/selectableItemBackground"
+        android:text="Color"
+        />
+    <!--Icons are set via code due to bug https://code.google.com/p/android/issues/detail?id=191111 Released in 23.1.1-->
+
+    <include layout="@layout/preference_divider_slim"/>
+
+    <TextView
+        android:id="@+id/context_third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:gravity="center|left"
+        android:drawablePadding="12dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="?attr/selectableItemBackground"
+        android:text="Icon"
+        />
+    <!--Icons are set via code due to bug https://code.google.com/p/android/issues/detail?id=191111 Released in 23.1.1-->
+
+</LinearLayout>

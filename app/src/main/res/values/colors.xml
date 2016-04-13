@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#689F38</color>
+    <color name="primaryDark">#33691E</color>
+    <color name="accent">#33691E</color>
+    <color name="accent2">#FFCC00</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="translucent">#99000000</color>
+    <color name="lightGray">#FFCCCCCC</color>
+    <color name="darkGray">#FFAAAAAA</color>
+    <color name="gray">#757575</color>
+    <color name="gray600">#757575</color>
+    <color name="gray500">#9E9E9E</color>
+    <color name="gray400">#BDBDBD</color>
+    <color name="gray300">#E0E0E0</color>
+    <color name="lime400">#FFD4E157</color>
+    <color name="graphite">#FF424242</color>
+    <color name="warningText">#D32F2F</color>
+    <color name="text">#88000000</color>
+    <color name="preference_fallback_accent_color">@color/accent</color>
+    <color name="windowBackground">#FFFFFFFF</color>
+</resources>
