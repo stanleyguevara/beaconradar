@@ -31,7 +31,7 @@ public class SettingsAdapter extends RecyclerView.Adapter<SettingsAdapter.Settin
             mData.add(new SettingCheckbox(Prefs.KEY_EXACT_SCHEDULING, "Exact timing", "Android won't optimize scan timing. Uses more battery.", R.drawable.ic_clock, Defaults.EXACT_SCHEDULING));
         }
         mData.add(new SettingHeader("Beacon ID methods"));
-        mData.add(new SettingList(Prefs.KEY_IBC_ID_METHOD, "iBeacon",       R.drawable.ic_apple2_full, R.array.id_beacon_val, R.array.id_beacon_txt, Defaults.EQ_MODE_IBC));
+        mData.add(new SettingList(Prefs.KEY_IBC_ID_METHOD, "iBeacon",       R.drawable.ic_apple_full, R.array.id_beacon_val, R.array.id_beacon_txt, Defaults.EQ_MODE_IBC));
         mData.add(new SettingList(Prefs.KEY_UID_ID_METHOD, "Eddystone UID", R.drawable.ic_fingerprint, R.array.id_edd_val, R.array.id_edd_txt, Defaults.EQ_MODE_UID));
         mData.add(new SettingList(Prefs.KEY_URL_ID_METHOD, "Eddystone URL", R.drawable.ic_link_variant, R.array.id_edd_val, R.array.id_edd_txt, Defaults.EQ_MODE_URL));
         mData.add(new SettingList(Prefs.KEY_TLM_ID_METHOD, "Eddystone TLM", R.drawable.ic_thermometer, R.array.id_tlm_val,    R.array.id_tlm_txt,    Defaults.EQ_MODE_TLM));

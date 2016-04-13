@@ -153,7 +153,7 @@ public class IBC extends ID {
 
     @Override
     public int getDefaultIcon() {
-        return R.drawable.ic_apple2_full;
+        return R.drawable.ic_apple_full;
     }
 
     protected IBC(Parcel in) {

@@ -20,7 +20,7 @@ public class IconsPalette {
         map.put("ic_thermometer", R.drawable.ic_thermometer);
         map.put("ic_call_merge", R.drawable.ic_call_merge);
         map.put("ic_hexagon_outline", R.drawable.ic_hexagon_outline);
-        map.put("ic_apple2_full", R.drawable.ic_apple2_full);
+        map.put("ic_apple_full", R.drawable.ic_apple_full);
         //Numbers
         map.put("ic_numeric_0_box", R.drawable.ic_numeric_0_box);
         map.put("ic_numeric_1_box", R.drawable.ic_numeric_1_box);
@@ -33,18 +33,18 @@ public class IconsPalette {
         map.put("ic_numeric_8_box", R.drawable.ic_numeric_8_box);
         map.put("ic_numeric_9_box", R.drawable.ic_numeric_9_box);
         //Arrows
-        map.put("ic_chevron_double_left", R.drawable.ic_chevron_double_left);
-        map.put("ic_chevron_double_up", R.drawable.ic_chevron_double_up);
-        map.put("ic_chevron_double_right", R.drawable.ic_chevron_double_right);
-        map.put("ic_chevron_double_down", R.drawable.ic_chevron_double_down);
-        map.put("ic_arrow_left_bold_circle_outline", R.drawable.ic_arrow_left_bold_circle_outline);
-        map.put("ic_arrow_up_bold_circle_outline", R.drawable.ic_arrow_up_bold_circle_outline);
-        map.put("ic_arrow_right_bold_circle_outline", R.drawable.ic_arrow_right_bold_circle_outline);
-        map.put("ic_arrow_down_bold_circle_outline", R.drawable.ic_arrow_down_bold_circle_outline);
-        map.put("ic_adjust", R.drawable.ic_adjust);
+        map.put("ic_double_left", R.drawable.ic_double_left);
+        map.put("ic_double_up", R.drawable.ic_double_up);
+        map.put("ic_double_right", R.drawable.ic_double_right);
+        map.put("ic_double_down", R.drawable.ic_double_down);
+        map.put("ic_arrow_left", R.drawable.ic_arrow_left);
+        map.put("ic_arrow_up", R.drawable.ic_arrow_up);
+        map.put("ic_arrow_right", R.drawable.ic_arrow_right);
+        map.put("ic_arrow_down", R.drawable.ic_arrow_down);
+        map.put("ic_arrow_point", R.drawable.ic_arrow_point);
         //Misc
-        map.put("ic_eddystone2", R.drawable.ic_eddystone2);
-        map.put("ic_google_physical_web", R.drawable.ic_google_physical_web);
+        map.put("ic_eddystone", R.drawable.ic_eddystone);
+        map.put("ic_physical_web", R.drawable.ic_physical_web);
         map.put("ic_home", R.drawable.ic_home);
         map.put("ic_car", R.drawable.ic_car);
         map.put("ic_bike", R.drawable.ic_bike);
@@ -54,8 +54,8 @@ public class IconsPalette {
         map.put("ic_tie", R.drawable.ic_tie);
         map.put("ic_silverware", R.drawable.ic_silverware);
         map.put("ic_school", R.drawable.ic_school);
-        map.put("ic_image_filter_hdr", R.drawable.ic_image_filter_hdr);
-        map.put("ic_image_filter_drama", R.drawable.ic_image_filter_drama);
+        map.put("ic_mountains", R.drawable.ic_mountains);
+        map.put("ic_cloud", R.drawable.ic_cloud);
         map.put("ic_pine_tree", R.drawable.ic_pine_tree);
         map.put("ic_leaf", R.drawable.ic_leaf);
         map.put("ic_water", R.drawable.ic_water);
