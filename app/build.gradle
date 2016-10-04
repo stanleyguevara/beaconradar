@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'com.jakewharton.hugo'
-apply plugin: 'com.neenbedankt.android-apt'
 
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.0'
         classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
         classpath 'me.tatarka:gradle-retrolambda:3.2.4'
     }
