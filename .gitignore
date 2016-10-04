@@ -30,3 +30,8 @@ proguard/
 
 # Android Studio captures folder
 captures/
+
+# Intellij idea internal
+.idea/
+app/app.iml
+beaconradar.iml
